@@ -12,4 +12,6 @@ contextBridge.exposeInMainWorld("api", {
   addUnite: (unite) => ipcRenderer.invoke("add-unite", unite),
   updateUnite: (unite) => ipcRenderer.invoke("update-unite", unite),
   deleteUnite: (id) => ipcRenderer.invoke("delete-unite", id),
+
+  printInvoice: (data) => ipcRenderer.invoke("print-invoice", data),
 });
